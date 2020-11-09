@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+    <body>
+        <div id="root">
+            <div class="wrapper">
+                <div class="prev">
+                    <i @click="immagine_precedente" class="fas fa-arrow-left fa-2x"></i>
+                </div>
+                <div class="images">
+                    <img :src="immagine[posizione_immagine]" alt="">
+                </div>
+                <div class="next">
+                    <i @click="immagine_successiva" class="fas fa-arrow-right fa-2x"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="main.js" charset="utf-8"></script>
+
+    </body>
+</html>
