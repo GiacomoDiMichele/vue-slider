@@ -16,11 +16,22 @@ var app = new Vue (
            methods: {
                //prima per la successiva
                immagine_successiva() {
-
+                   //ad ogni interazione incremento l'indice pari al suo valore + 1
+                   this.posizione_immagine += 0;
+                   //se la posizione dell'immagine è maggiore della lunghezza dell'array
+                   if (this.posizione_immagine > this.immagine.length - 1) {
+                       //riassegno il valore di partenza, ovvero della posizione della prima immagine
+                       this.posizione_immagine = 0;
+                   }
                },
             //subito dopo per quella precedente
                immagine_precedente() {
-
+                   //decremento di 1 l'indice ad ogni interazione
+                   this.posizione_immagine -= 0;
+                   //se la posizione dell'immagine è minore di 0, quindi -1(che non può esistere) gli riassegno il valore dell'ultima posizione nell'array di immagini
+                   if (this.posizione_immagine < 0) {
+                       this.posizione_immagine = this.immagini.length - 1;
+                   }
                }
            }
     }
