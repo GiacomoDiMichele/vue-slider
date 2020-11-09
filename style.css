@@ -24,6 +24,7 @@
     width: calc(100% - 160px);
     height: 100%;
     float: left;
+    position: relative;
 }
 
 img {
@@ -34,4 +35,20 @@ img {
 
 .prev i, .next i {
     cursor: pointer;
+}
+
+.circles {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circles i {
+    padding: 3px;
+}
+
+.circles i.active {
+    color: red;
+    border: 2px solid grey;
+    border-radius: 100%;
 }
